@@ -104,17 +104,16 @@
     }
 }
 
-.download-buttons img {
+/* .download-buttons img {
     height: 60px;
     width: auto;
     margin: 5px;
-}
+} */
 
 /* Download buttons */
 .download-buttons {
     display: flex;
     justify-content: center;
-    gap: 20px;
     flex-wrap: nowrap;
     margin-bottom: 60px;
 }
