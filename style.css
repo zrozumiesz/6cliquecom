@@ -93,22 +93,21 @@
     .download-buttons img {
         height: 80px;
         width: auto;
+        border-radius: 0;
+        box-shadow: none;
     }
 
     .download-buttons a {
         min-width: 140px;
-        /* optional: make button container slightly wider */
         padding: 5px 5px;
-        /* adjust padding to match new size */
         flex: 1 1 auto;
     }
 }
 
-/* .download-buttons img {
-    height: 60px;
-    width: auto;
-    margin: 5px;
-} */
+.download-buttons img {
+    border-radius: 0;
+    box-shadow: none;
+}
 
 /* Download buttons */
 .download-buttons {
