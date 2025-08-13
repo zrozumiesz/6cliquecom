@@ -1,0 +1,177 @@
+/* Reset & base */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+        Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #222;
+    background: #fff;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+header {
+    position: relative;
+    /* needed for absolute positioning inside */
+}
+
+.app-icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 60px;
+    /* size of the icon */
+    height: 60px;
+    border-radius: 12px;
+    /* optional rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Hero */
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #556B2F, #CC7722);
+    color: #fff;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 12px;
+    font-weight: 900;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+header p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Download buttons */
+.download-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+
+.download-buttons a {
+    /* background: #fff; */
+    color: #fff;
+    font-weight: 700;
+    padding: 12px 24px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: none;
+    transition: transform 0.15s ease;
+    font-size: 1rem;
+    min-width: 180px;
+}
+
+.download-buttons a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.download-buttons img {
+    height: 48px;
+    width: auto;
+}
+
+/* Screenshots grid */
+.screenshots {
+    margin: 0 0 60px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    padding: 0 24px;
+}
+
+.screenshot-item {
+    border-radius: 16px;
+    overflow: hidden;
+    background: #fefefe;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.screenshot-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Sections */
+section {
+    padding: 60px 24px;
+    max-width: 900px;
+    margin: 0 auto 60px auto;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.25rem;
+    margin-bottom: 16px;
+    color: #334422;
+    font-weight: 800;
+}
+
+section p {
+    font-size: 1.125rem;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2.25rem;
+    }
+
+    .download-buttons a {
+        min-width: 140px;
+        padding: 10px 16px;
+        font-size: 0.9rem;
+    }
+
+    section h2 {
+        font-size: 1.75rem;
+    }
+
+    section p {
+        font-size: 1rem;
+    }
+}
