@@ -98,7 +98,7 @@
     .download-buttons a {
         min-width: 140px;
         /* optional: make button container slightly wider */
-        padding: 12px 20px;
+        padding: 5px 5px;
         /* adjust padding to match new size */
         flex: 1 1 auto;
     }
