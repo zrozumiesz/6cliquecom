@@ -1,212 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Your App Landing Page</title>
-  <style>
-    /* Reset & base */
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-        Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      color: #222;
-      background: #fff;
-      line-height: 1.6;
-    }
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-    img {
-      max-width: 100%;
-      display: block;
-      border-radius: 12px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>6Clique: Deep Conversations</title>
+    <style>
+        /* Reset & base */
+        * {
+            box-sizing: border-box;
+        }
 
-    /* Container */
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+                Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: #222;
+            background: #fff;
+            line-height: 1.6;
+        }
 
-    /* Hero */
-    header {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-      padding: 60px 20px;
-      background: linear-gradient(135deg, #556B2F, #CC7722);
-      color: #fff;
-    }
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 12px;
-      font-weight: 900;
-      text-shadow: 0 3px 6px rgba(0,0,0,0.3);
-    }
-    header p {
-      font-size: 1.25rem;
-      margin-bottom: 30px;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
 
-    /* Download buttons */
-    .download-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-bottom: 60px;
-    }
-    .download-buttons a {
-  /* background: #fff; */
-  color: #fff;
-  font-weight: 700;
-  padding: 12px 24px;
-  border-radius: 40px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  box-shadow: none;
-  transition: transform 0.15s ease;
-  font-size: 1rem;
-  min-width: 180px;
-}
-    .download-buttons a:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-    }
-    .download-buttons img {
-      height: 24px;
-      width: auto;
-    }
+        img {
+            max-width: 100%;
+            display: block;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
 
-    /* Screenshots grid */
-    .screenshots {
-      margin: 0 0 60px 0;
-      display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-      gap: 24px;
-      padding: 0 24px;
-    }
-    .screenshot-item {
-      border-radius: 16px;
-      overflow: hidden;
-      background: #fefefe;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-      cursor: pointer;
-    }
-    .screenshot-item:hover {
-      transform: scale(1.03);
-      box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-    }
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
 
-    /* Sections */
-    section {
-      padding: 60px 24px;
-      max-width: 900px;
-      margin: 0 auto 60px auto;
-      text-align: center;
-    }
-    section h2 {
-      font-size: 2.25rem;
-      margin-bottom: 16px;
-      color: #334422;
-      font-weight: 800;
-    }
-    section p {
-      font-size: 1.125rem;
-      color: #555;
-      max-width: 700px;
-      margin: 0 auto;
-      line-height: 1.5;
-    }
+        header {
+            position: relative;
+            /* needed for absolute positioning inside */
+        }
 
-    /* Responsive adjustments */
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2.25rem;
-      }
-      .download-buttons a {
-        min-width: 140px;
-        padding: 10px 16px;
-        font-size: 0.9rem;
-      }
-      section h2 {
-        font-size: 1.75rem;
-      }
-      section p {
-        font-size: 1rem;
-      }
-    }
-  </style>
+        .app-icon {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 60px;
+            /* size of the icon */
+            height: 60px;
+            border-radius: 12px;
+            /* optional rounded corners */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Hero */
+        header {
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #556B2F, #CC7722);
+            color: #fff;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 12px;
+            font-weight: 900;
+            text-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        header p {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Download buttons */
+        .download-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 60px;
+        }
+
+        .download-buttons a {
+            /* background: #fff; */
+            color: #fff;
+            font-weight: 700;
+            padding: 12px 24px;
+            border-radius: 40px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: none;
+            transition: transform 0.15s ease;
+            font-size: 1rem;
+            min-width: 180px;
+        }
+
+        .download-buttons a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        .download-buttons img {
+            height: 48px;
+            width: auto;
+        }
+
+        /* Screenshots grid */
+        .screenshots {
+            margin: 0 0 60px 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            padding: 0 24px;
+        }
+
+        .screenshot-item {
+            border-radius: 16px;
+            overflow: hidden;
+            background: #fefefe;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .screenshot-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 24px;
+            max-width: 900px;
+            margin: 0 auto 60px auto;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 2.25rem;
+            margin-bottom: 16px;
+            color: #334422;
+            font-weight: 800;
+        }
+
+        section p {
+            font-size: 1.125rem;
+            color: #555;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2.25rem;
+            }
+
+            .download-buttons a {
+                min-width: 140px;
+                padding: 10px 16px;
+                font-size: 0.9rem;
+            }
+
+            section h2 {
+                font-size: 1.75rem;
+            }
+
+            section p {
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-<header>
-  <h1>6Clique</h1>
-  <p>The most intimate social experience — deep connection in groups of six.</p>
-  <div class="download-buttons">
-    <a href="https://play.google.com/store/apps/details?id=your.app.id" target="_blank" rel="noopener noreferrer">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" />
-    </a>
-    <a href="https://apps.apple.com/app/idYOUR_APP_ID" target="_blank" rel="noopener noreferrer">
-      <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" style="height: 24px;" />
-    </a>
-  </div>
-</header>
+    <header>
+        <img src="your-icon.png" alt="6Clique icon" class="app-icon" />
 
-<section class="screenshots container" aria-label="App screenshots">
-  <div class="screenshot-item">
-    <img src="https://via.placeholder.com/320x640?text=Screenshot+1" alt="Screenshot showing group chat" />
-  </div>
-  <div class="screenshot-item">
-    <img src="https://via.placeholder.com/320x640?text=Screenshot+2" alt="Screenshot showing journal feature" />
-  </div>
-  <div class="screenshot-item">
-    <img src="https://via.placeholder.com/320x640?text=Screenshot+3" alt="Screenshot showing survey results" />
-  </div>
-  <div class="screenshot-item">
-    <img src="https://via.placeholder.com/320x640?text=Screenshot+4" alt="Screenshot showing user profile" />
-  </div>
-</section>
+        <h1>6Clique</h1>
+        <p>The most intimate social experience — deep connection in groups of six.</p>
+        <div class="download-buttons">
+            <a href="https://play.google.com/store/apps/details?id=your.app.id" target="_blank"
+                rel="noopener noreferrer">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                    alt="Get it on Google Play" />
+            </a>
+            <a href="https://apps.apple.com/app/idYOUR_APP_ID" target="_blank" rel="noopener noreferrer">
+                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                    alt="Download on the App Store" />
+            </a>
+        </div>
+    </header>
 
-<section>
-  <h2>How It Works</h2>
-  <p>
-    6Clique connects you with five other people in a small, safe group where you can share honestly and feel truly known.  
-    No swiping. No endless scrolling. Just real conversations that matter.
-  </p>
-</section>
+    <section class="screenshots container" aria-label="App screenshots">
+        <div class="screenshot-item">
+            <img src="https://via.placeholder.com/320x640?text=Screenshot+1" alt="Screenshot showing group chat" />
+        </div>
+        <div class="screenshot-item">
+            <img src="https://via.placeholder.com/320x640?text=Screenshot+2" alt="Screenshot showing journal feature" />
+        </div>
+        <div class="screenshot-item">
+            <img src="https://via.placeholder.com/320x640?text=Screenshot+3" alt="Screenshot showing survey results" />
+        </div>
+        <div class="screenshot-item">
+            <img src="https://via.placeholder.com/320x640?text=Screenshot+4" alt="Screenshot showing user profile" />
+        </div>
+    </section>
 
-<section>
-  <h2>The Value</h2>
-  <p>
-    Build meaningful connections and gain emotional support through shared experiences.  
-    6Clique’s unique design fosters trust and empathy in intimate groups, helping you grow emotionally and socially.
-  </p>
-</section>
+    <section>
+        <h2>How It Works</h2>
+        <p>
+            6Clique connects you with five other people in a small, safe group where you can share honestly and feel
+            truly known.
+            No swiping. No endless scrolling. Just real conversations that matter.
+        </p>
+    </section>
 
-<section>
-  <h2>Why 6Clique?</h2>
-  <p>
-    Because connection isn’t about numbers — it’s about depth.  
-    Our app’s name hints at exclusivity, but the experience is anything but.  
-    Everyone’s welcome to belong.
-  </p>
-</section>
+    <section>
+        <h2>The Value</h2>
+        <p>
+            Build meaningful connections and gain emotional support through shared experiences.
+            6Clique’s unique design fosters trust and empathy in intimate groups, helping you grow emotionally and
+            socially.
+        </p>
+    </section>
+
+    <section>
+        <h2>Why 6Clique?</h2>
+        <p>
+            Because connection isn’t about numbers — it’s about depth.
+            Our app’s name hints at exclusivity, but the experience is anything but.
+            Everyone’s welcome to belong.
+        </p>
+    </section>
 
 </body>
+
 </html>
