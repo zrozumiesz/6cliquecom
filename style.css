@@ -68,11 +68,11 @@
 .hero {
     padding: 40px 20px;
     text-align: center;
-    background-color: #f9f9f9;
+    /* background-color: #f9f9f9; */
     /* optional soft background */
 }
 
- .hero h1 {
+.hero h1 {
     font-size: 2.5rem;
     margin-bottom: 12px;
     font-weight: 900;
@@ -91,9 +91,16 @@
 
 @media (max-width: 600px) {
     .download-buttons img {
-        height: 60px;
-        /* smaller on mobile */
+        height: 80px;
         width: auto;
+    }
+
+    .download-buttons a {
+        min-width: 140px;
+        /* optional: make button container slightly wider */
+        padding: 12px 20px;
+        /* adjust padding to match new size */
+        flex: 1 1 auto;
     }
 }
 
@@ -102,6 +109,7 @@
     width: auto;
     margin: 5px;
 }
+
 /* Download buttons */
 .download-buttons {
     display: flex;
