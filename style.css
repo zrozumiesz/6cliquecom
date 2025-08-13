@@ -253,6 +253,9 @@ section p {
         /* allow buttons to shrink */
         min-width: 120px;
         /* optional minimum width */
+        padding: 5px 5px;
+        gap: 2px;
+
     }
 
     section h2 {
