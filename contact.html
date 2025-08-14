@@ -120,9 +120,8 @@
         document.getElementById('contactForm').addEventListener('submit', function (e) {
             e.preventDefault(); // prevent page reload
 
-            const name = encodeURIComponent(document.getElementById('name').value);
             const subject = encodeURIComponent(document.getElementById('subject').value);
-            const body = encodeURIComponent(document.getElementById('body').value + "\n\nFrom: " + name);
+            const body = encodeURIComponent(document.getElementById('body').value + "\n\nFrom: " + document.getElementById('name').value);
 
             const mailtoLink = `mailto:contact@6clique.com?subject=${subject}&body=${body}`;
 
