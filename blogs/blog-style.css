@@ -123,6 +123,7 @@ a {
 
 .blog-post-full img {
     display: block;
+    filter: grayscale(70%);
     margin: 0 auto 1.5rem auto;
     /* center horizontally + spacing below */
     width: 100%;
@@ -136,6 +137,8 @@ a {
 /* Mobile: full width */
 @media (max-width: 768px) {
     .blog-post-full img {
+        filter: grayscale(70%);
+
         width: 100%;
         /* take up full container width */
         max-width: 100%;
@@ -147,6 +150,7 @@ a {
 .blog-post-content img {
     width: 50%;
     max-height: 400px;
+    
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 1.5rem;

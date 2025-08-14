@@ -706,6 +706,7 @@ header p {
 .blog-post img {
     width: 100%;
     height: 200px;
+    filter: grayscale(70%);
     object-fit: cover;
 }
 
@@ -719,10 +720,9 @@ header p {
 }
 
 .blog-post-content h2 {
-
-    font-size: 1.5rem;
-    line-height: 1.2;
-    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 0.2rem;
 }
 
 .blog-post-content .date {
@@ -736,4 +736,14 @@ header p {
     margin-bottom: 1rem;
     color: #444;
     line-height: 1.5;
+    display: -webkit-box;
+    /* Required for line-clamp */
+    -webkit-line-clamp: 7;
+    /* Maximum number of lines */
+    -webkit-box-orient: vertical;
+    /* Required for line-clamp */
+    overflow: hidden;
+    /* Hide the rest */
+    text-overflow: ellipsis;
+    /* Add ... when cut off */
 }
