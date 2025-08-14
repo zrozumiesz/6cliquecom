@@ -311,33 +311,12 @@ a {
     margin-bottom: 1.5rem;
     color: #555;
 }
-/* 
-.app-promo .download-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-    flex-wrap: wrap;
-}
 
-.app-promo .download-buttons a img {
-    height: 60px;
-    width: auto;
-    transition: transform 0.2s ease;
-}
-
-.app-promo .download-buttons a img:hover {
-    transform: scale(1.05);
-} */
-
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
     .app-promo {
         padding: 1.5rem 1rem;
     }
-
-    /* .app-promo .download-buttons a img {
-        height: 50px;
-    } */
-}
+} */
 
 @media (max-width: 600px) {
     .download-buttons img {
@@ -372,7 +351,7 @@ a {
     /* background: #fff; */
     color: #fff;
     font-weight: 700;
-    padding: 20px 20px;
+    padding: 12px 24px;
     border-radius: 40px;
     display: flex;
     align-items: center;
