@@ -311,7 +311,7 @@ a {
     margin-bottom: 1.5rem;
     color: #555;
 }
-
+/* 
 .app-promo .download-buttons {
     display: flex;
     justify-content: center;
@@ -327,16 +327,16 @@ a {
 
 .app-promo .download-buttons a img:hover {
     transform: scale(1.05);
-}
+} */
 
 @media (max-width: 600px) {
     .app-promo {
         padding: 1.5rem 1rem;
     }
 
-    .app-promo .download-buttons a img {
+    /* .app-promo .download-buttons a img {
         height: 50px;
-    }
+    } */
 }
 
 @media (max-width: 600px) {

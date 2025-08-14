@@ -750,7 +750,7 @@ header p {
 
 .contact-container {
     max-width: 600px;
-    margin: 3rem auto;
+    margin: 0 auto 3rem auto; /* top 0, right auto, bottom 3rem, left auto */
     padding: 2rem;
     background: #fffefc;
     border-radius: 20px;
