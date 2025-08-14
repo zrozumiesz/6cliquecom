@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>6Clique: Our Story</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description"
+        content="Read the story behind 6Clique, a social app built to foster meaningful emotional connections.">
+    <link rel="icon" href="app-icon.png" type="image/png">
+</head>
+
+<body>
+
+    <!-- Top white header bar (same as index.html) -->
+    <header class="top-bar">
+        <div class="header-left">
+            <a href="https://6clique.com">
+                <img src="applogo.png" alt="6Clique: meaningful social media app icon" class="app-icon" />
+            </a>
+        </div>
+
+        <!-- Desktop navigation -->
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="index.html#download">Download</a></li>
+                <li><a href="story.html">Our Story</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-right">
+            <button class="hamburger" aria-label="More actions">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="mobile-menu">
+                <ul>
+                    <li><a href="index.html#download">Download</a></li>
+                    <li><a href="story.html">Our Story</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- BLOG CONTENT -->
+    <main class="blog-container">
+        <div class="blog-header">
+            <h1>Our Blog</h1>
+        </div>
+
+        <div class="blog-list">
+
+            <!-- BLOG POST 1 -->
+            <article class="blog-post">
+                <img src="group.webp" alt="Blog 1">
+                <div class="blog-post-content">
+                    <h2>How We Built Our App</h2>
+                    <div class="date">August 14, 2025</div>
+                    <p>We wanted to create a space for genuine connection. Here's a behind-the-scenes look at our
+                        journey.</p>
+                    <a href="blog-post1.html" class="read-more">Read More →</a>
+                </div>
+            </article>
+
+            <!-- BLOG POST 2 -->
+            <!-- <article class="blog-post">
+                <img src="applogo.png" alt="Blog 2">
+                <div class="blog-post-content">
+                    <h2>Designing for Emotional Connection</h2>
+                    <div class="date">August 5, 2025</div>
+                    <p>Colors, typography, and layouts that invite trust and warmth — here's how we approached design.
+                    </p>
+                    <a href="blog-post2.html" class="read-more">Read More →</a>
+                </div>
+            </article> -->
+
+
+
+            <!-- Add more blog posts below -->
+        </div>
+    </main>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="site-footer">
+        <p>
+            <a href="https://6clique.com/privacy-policy">Privacy Policy</a> |
+            <a href="https://6clique.com/terms-and-conditions">Terms & Conditions</a>
+        </p>
+        <p>&copy; 2025 6Clique LLC. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts (same as index.html) -->
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        hamburger.addEventListener('click', () => {
+            mobileMenu.style.display = mobileMenu.style.display === 'block' ? 'none' : 'block';
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.style.display = 'none';
+            }
+        });
+    </script>
+
+</body>
+
+</html>
