@@ -301,28 +301,33 @@ header p {
 }
 
 /* Sections */
-section {
+.info-section {
     padding: 30px 24px;
     max-width: 900px;
     margin: 20px auto 0 auto;
     text-align: center;
 }
 
-section h2 {
+.info-section h2 {
     font-family: 'Lora', serif;
 
-    font-size: 2.25rem;
+    font-size: 1.5rem;
     margin-bottom: 16px;
     color: #334422;
     font-weight: 800;
 }
 
-section p {
+.info-section p {
     font-size: 1.05rem;
     color: #555;
     max-width: 700px;
     margin: 0 auto;
     line-height: 1.5;
+}
+
+.info-container {
+    margin-bottom: 100px;
+    /* extra space after the last section */
 }
 
 /* Responsive adjustments */
@@ -368,4 +373,119 @@ section p {
 
 .site-footer a:hover {
     text-decoration: underline;
+}
+
+.card {
+    background-color: #ffff;
+    /* soft white for readability */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px 40px 20px;
+    /* top right bottom left */
+    margin: 0 auto 60px auto;
+    /* top 0, horizontal auto, bottom 60px */
+
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .card {
+        margin-left: 40px;
+        margin-right: 40px;
+        /* optional: reduce padding if needed */
+        padding: 20px 20px 40px 20px;
+    }
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* FAQ Section */
+.faq {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 0 24px;
+    /* font-family: 'Lora', serif; */
+    color: #333;
+}
+
+.faq h2 {
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: #334422;
+    text-align: center;
+    margin-bottom: 40px;
+    font-family: 'Lora', serif;
+
+}
+.faq p {
+}
+
+.faq-item {
+    background-color: #fff;
+    /* soft warm card feel */
+    border-radius: 16px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.faq-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.faq-question {
+    padding: 20px 24px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 700;
+    position: relative;
+}
+
+.faq-question::after {
+    content: '';
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%) rotate(0deg);
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    padding: 4px; /* size of the arrow */
+    display: inline-block;
+    transform-origin: center;
+    transition: transform 0.3s ease;
+    /* Create the arrow shape */
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.faq-item.open .faq-question::after {
+    transform: translateY(-50%) rotate(-135deg); /* flips it down to up */
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 24px;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: #555;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+.faq-item.open .faq-answer {
+    max-height: 800px;
+    /* enough for most answers */
+    padding: 0px 10px 20px 24px;
+}
+
+.faq-answer p,
+.faq-answer ul,
+.faq-answer li {
+    font-size: 0.9rem; /* or whatever size matches your design */
+    line-height: 1.5;
 }
