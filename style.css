@@ -71,6 +71,8 @@
 }
 
 .hero h1 {
+    font-family: 'Lora', serif;
+
     font-size: 2.1rem;
     margin-bottom: 12px;
     line-height: 1.2;
@@ -114,7 +116,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: nowrap;
-    margin-bottom: 60px;
+    margin-bottom: 10px;
 }
 
 .download-buttons a {
@@ -189,23 +191,91 @@ header p {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-
-/* Screenshots grid */
-.screenshots {
-    margin: 0 0 60px 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
-    padding: 0 24px;
+.screenshots-section {
+    background: #f4f4f4;
+    padding: 40px 20px;
+    border-radius: 12px;
+    max-width: 1100px;
+    margin: 40px auto;
 }
 
-.screenshot-item {
-    border-radius: 16px;
-    overflow: hidden;
-    background: #fefefe;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    cursor: pointer;
+/* Base: 1-column mobile/narrow order */
+.screenshots-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    grid-template-areas:
+        "s1"
+        "s2"
+        "t1"
+        "s3"
+        "s4"
+        "t2";
+}
+
+/* Name areas once, apply at all sizes */
+#s1 {
+    grid-area: s1;
+}
+
+#s2 {
+    grid-area: s2;
+}
+
+#s3 {
+    grid-area: s3;
+}
+
+#s4 {
+    grid-area: s4;
+}
+
+#t1 {
+    grid-area: t1;
+}
+
+#t2 {
+    grid-area: t2;
+}
+
+/* Desktop/wide: 3 equal columns with alternating rows */
+@media (min-width: 900px) {
+    .screenshots-grid {
+        grid-template-columns: repeat(3, minmax(260px, 1fr));
+        grid-template-areas:
+            "s1 s2 t1"
+            "t2 s3 s4";
+    }
+}
+
+.screenshot-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.text-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    background: #000;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.text-item h3 {
+    color: #ffcc00;
+}
+
+.text-item p {
+    color: #ddd;
+}
+
+.text-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
 .screenshot-item:hover {
@@ -215,13 +285,15 @@ header p {
 
 /* Sections */
 section {
-    padding: 60px 24px;
+    padding: 30px 24px;
     max-width: 900px;
-    margin: 0 auto 60px auto;
+    margin: 20px auto 0 auto;
     text-align: center;
 }
 
 section h2 {
+    font-family: 'Lora', serif;
+
     font-size: 2.25rem;
     margin-bottom: 16px;
     color: #334422;
