@@ -59,32 +59,17 @@
         <div class="blog-list">
 
             <!-- BLOG POST 1 -->
-            <article class="blog-post">
-                <img src="group.webp" alt="Blog 1">
+            <article class="blog-post" data-href="blogs/social-media-and-loneliness.html">
+                <img src="images/loneliness.jpg" alt="Blog 1">
                 <div class="blog-post-content">
-                    <h2>How We Built Our App</h2>
+                    <h2>Social Media and Loneliness: Understanding the Hidden Connection</h2>
                     <div class="date">August 14, 2025</div>
-                    <p>We wanted to create a space for genuine connection. Here's a behind-the-scenes look at our
-                        journey.</p>
-                    <a href="blog-post1.html" class="read-more">Read More →</a>
+                    <p>On the surface, social media seems like the ultimate solution to loneliness. It allows users to stay
+                    in touch with friends and family, meet new people, and participate in communities of shared
+                    interests. However, many people find that the connections they make online are often superficial.</p>
                 </div>
             </article>
 
-            <!-- BLOG POST 2 -->
-            <!-- <article class="blog-post">
-                <img src="applogo.png" alt="Blog 2">
-                <div class="blog-post-content">
-                    <h2>Designing for Emotional Connection</h2>
-                    <div class="date">August 5, 2025</div>
-                    <p>Colors, typography, and layouts that invite trust and warmth — here's how we approached design.
-                    </p>
-                    <a href="blog-post2.html" class="read-more">Read More →</a>
-                </div>
-            </article> -->
-
-
-
-            <!-- Add more blog posts below -->
         </div>
     </main>
 
@@ -110,6 +95,15 @@
             if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
                 mobileMenu.style.display = 'none';
             }
+        });
+    </script>
+
+    <script>
+        document.querySelectorAll('.blog-post').forEach(post => {
+            post.addEventListener('click', () => {
+                const url = post.getAttribute('data-href');
+                if (url) window.location.href = url;
+            });
         });
     </script>
 
