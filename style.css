@@ -154,7 +154,7 @@
 
 .hero h1 {
     font-family: 'georgia', serif;
-    transform: scaleY(1.2); /* 1 = normal, >1 = taller */
+    transform: scaleY(1.1); /* 1 = normal, >1 = taller */
 
     font-size: 2rem;
     margin-bottom: 12px;
@@ -355,7 +355,7 @@ header p {
 
 .daily-question {
     font-family: 'georgia', serif;
-    transform: scaleY(1.2); /* 1 = normal, >1 = taller */
+    transform: scaleY(1.1); /* 1 = normal, >1 = taller */
     font-size: 0.90rem;
     line-height: 1.7;
     margin: 20px 0;
@@ -394,7 +394,7 @@ header p {
 
 .info-section h2 {
     font-family: 'georgia', serif;
-    transform: scaleY(1.2); /* 1 = normal, >1 = taller */
+    transform: scaleY(1.1); /* 1 = normal, >1 = taller */
 
     font-size: 1.4rem;
     margin-bottom: 16px;
@@ -509,7 +509,7 @@ header p {
     text-align: center;
     margin-bottom: 40px;
     font-family: 'georgia', serif;
-    transform: scaleY(1.2); /* 1 = normal, >1 = taller */
+    transform: scaleY(1.1); /* 1 = normal, >1 = taller */
 
 }
 .faq p {
@@ -563,7 +563,7 @@ header p {
     height: auto;
     overflow: hidden;
     padding: 0 24px;
-    font-size: 12px;
+    font-size: 0.9rem;
     line-height: 1.7;
     color: #555;
     transition: max-height 0.4s ease, padding 0.3s ease;
