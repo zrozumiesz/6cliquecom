@@ -747,6 +747,7 @@ header p {
     text-overflow: ellipsis;
     /* Add ... when cut off */
 }
+
 .contact-container {
     max-width: 600px;
     margin: 3rem auto;
