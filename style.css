@@ -11,7 +11,7 @@
     background-color: white;
     padding: 10px 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: sticky;
+    position: relative;
     top: 0;
     z-index: 100;
 }
@@ -34,6 +34,28 @@
         height: 70px;
         /* smaller height on mobile */
     }
+}
+
+/* Desktop nav - hidden on mobile */
+.desktop-nav {
+    display: none;
+}
+
+.desktop-nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.desktop-nav li {
+    margin-left: 30px;
+}
+
+.desktop-nav li a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #333;
 }
 
 /* Hamburger menu */
@@ -64,6 +86,66 @@
     }
 }
 
+
+/* Mobile menu hidden by default */
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 60px; /* adjust depending on your header height */
+    right: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    z-index: 200;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.mobile-menu li {
+    padding: 10px 20px;
+}
+
+.mobile-menu li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+
+.mobile-menu li a:hover {
+    color: #ffcc00; /* optional hover color */
+}
+
+/* Responsive breakpoints */
+@media (min-width: 768px) {
+    .hamburger, .mobile-menu {
+        display: none;
+    }
+
+    .desktop-nav {
+        display: block;
+    }
+
+    /* Shift logo to align with screenshots section
+    .app-icon {
+        margin-left: 60px; /* adjust based on screenshots section padding */
+    
+        /* Align logo with screenshots section */
+    .top-bar {
+        max-width: 1100px; /* same as screenshots section */
+        margin: 0 auto; /* center the header */
+        padding: 10px 0; /* optional: smaller padding since container is centered */
+    }
+
+    .app-icon {
+        margin-left: 60px; /* adjust this value as needed */
+        height: 100px;
+    }
+}
+
 /* Hero section (below header) */
 .hero {
     padding: 20px 20px;
@@ -71,9 +153,10 @@
 }
 
 .hero h1 {
-    font-family: 'Lora', serif;
+    font-family: 'georgia', serif;
+    transform: scaleY(1.2); /* 1 = normal, >1 = taller */
 
-    font-size: 2.1rem;
+    font-size: 2rem;
     margin-bottom: 12px;
     line-height: 1.2;
     font-weight: 900;
@@ -271,8 +354,9 @@ header p {
 }
 
 .daily-question {
-    font-family: 'Lora', serif;
-    font-size: 0.95rem;
+    font-family: 'georgia', serif;
+    transform: scaleY(1.2); /* 1 = normal, >1 = taller */
+    font-size: 0.90rem;
     line-height: 1.7;
     margin: 20px 0;
     padding-left: 10px;
@@ -309,8 +393,10 @@ header p {
 }
 
 .info-section h2 {
-    font-family: 'Lora', serif;
-    font-size: 1.5rem;
+    font-family: 'georgia', serif;
+    transform: scaleY(1.2); /* 1 = normal, >1 = taller */
+
+    font-size: 1.4rem;
     margin-bottom: 16px;
     color: #334422;
     font-weight: 800;
@@ -365,7 +451,7 @@ header p {
     /* light gray background */
     text-align: center;
     padding: 20px;
-    font-family: 'Lora', serif;
+    font-family: 'georgia', serif;
     font-size: 14px;
     color: #333;
 }
@@ -413,17 +499,17 @@ header p {
     max-width: 800px;
     margin: 60px auto;
     padding: 0 24px;
-    /* font-family: 'Lora', serif; */
     color: #333;
 }
 
 .faq h2 {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     font-weight: 800;
     color: #334422;
     text-align: center;
     margin-bottom: 40px;
-    font-family: 'Lora', serif;
+    font-family: 'georgia', serif;
+    transform: scaleY(1.2); /* 1 = normal, >1 = taller */
 
 }
 .faq p {
@@ -477,7 +563,7 @@ header p {
     height: auto;
     overflow: hidden;
     padding: 0 24px;
-    font-size: 0.9rem;
+    font-size: 12px;
     line-height: 1.7;
     color: #555;
     transition: max-height 0.4s ease, padding 0.3s ease;
@@ -492,6 +578,6 @@ header p {
 .faq-answer p,
 .faq-answer ul,
 .faq-answer li {
-    font-size: 0.9rem; /* or whatever size matches your design */
+    font-size: 15px; /* or whatever size matches your design */
     line-height: 1.5;
 }

@@ -1,5 +1,3 @@
-<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,14 +42,37 @@
     <!-- Top white header bar -->
     <header class="top-bar">
         <div class="header-left">
-            <img src="applogo.png" alt="6Clique: meaningful social media app icon" class="app-icon" />
+            <a href="https://6clique.com">
+                <img src="applogo.png" alt="6Clique: meaningful social media app icon" class="app-icon" />
+            </a>
         </div>
+
+        <!-- Desktop navigation -->
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="#download">Download</a></li>
+                <li><a href="#about">Our Story</a></li>
+                <li><a href="#contact">Blog</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+
+            </ul>
+        </nav>
+
         <div class="header-right">
             <button class="hamburger" aria-label="More actions">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
+
+            <nav class="mobile-menu">
+                <ul>
+                    <li><a href="#download">Download</a></li>
+                    <li><a href="#about">Our Story</a></li>
+                    <li><a href="#about">Blog</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
@@ -263,8 +284,8 @@
 
     <footer class="site-footer">
         <p>
-            <a href="https://6clique.com/privacy-policy" target="_blank">Privacy Policy</a> |
-            <a href="https://6clique.com/terms-and-conditions" target="_blank">Terms & Conditions</a>
+            <a href="https://6clique.com/privacy-policy">Privacy Policy</a> |
+            <a href="https://6clique.com/terms-and-conditions">Terms & Conditions</a>
         </p>
         <p>&copy; 2025 6Clique LLC. All rights reserved.</p>
     </footer>
@@ -281,6 +302,24 @@
         });
     });
 </script>
+
+
+<script>
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    hamburger.addEventListener('click', () => {
+        mobileMenu.style.display = mobileMenu.style.display === 'block' ? 'none' : 'block';
+    });
+
+    // Optional: close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+            mobileMenu.style.display = 'none';
+        }
+    });
+</script>
+
 </body>
 
 </html>
