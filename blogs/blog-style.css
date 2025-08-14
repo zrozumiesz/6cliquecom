@@ -320,14 +320,16 @@ a {
 
 @media (max-width: 600px) {
     .download-buttons img {
-        height: 80px;
+        height: 50px;
         width: auto;
+        max-width: 100%;
         border-radius: 10;
         box-shadow: none;
     }
 
     .download-buttons a {
-        min-width: 140px;
+        min-width: 0;
+        /* min-width: 140px; */
         padding: 10px 10px;
         flex: 1 1 auto;
     }
@@ -376,6 +378,5 @@ a {
         /* optional minimum width */
         padding: 15px 15px;
         gap: 2px;
-
     }
 }
