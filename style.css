@@ -16,6 +16,45 @@
     z-index: 100;
 }
 
+.story-section .hero-title {
+    font-family: 'georgia', serif;
+    transform: scaleY(1.1);
+    font-size: 2rem;
+    margin-bottom: 12px;
+    line-height: 1.2;
+    font-weight: 900;
+}
+
+/* Remove default bullets and spacing */
+.story-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Style each list item like a quote block */
+.story-section ul li {
+    position: relative;
+    padding-left: 1rem;
+    margin-top: 0.5rem;
+    /* top spacing */
+    margin-bottom: 1rem;
+    border-left: 3px solid #6c8a8e;
+    /* change color to match your site */
+    font-family: 'Georgia', serif;
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+/* Add a softer <hr> style */
+.story-section hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.2), transparent);
+    margin: 1.5rem 0;
+}
+
+
 /* Left side (icon) */
 .header-left {
     display: flex;
@@ -91,11 +130,12 @@
 .mobile-menu {
     display: none;
     position: absolute;
-    top: 60px; /* adjust depending on your header height */
+    top: 60px;
+    /* adjust depending on your header height */
     right: 20px;
     background: white;
     border-radius: 8px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     z-index: 200;
 }
 
@@ -116,12 +156,15 @@
 }
 
 .mobile-menu li a:hover {
-    color: #ffcc00; /* optional hover color */
+    color: #ffcc00;
+    /* optional hover color */
 }
 
 /* Responsive breakpoints */
 @media (min-width: 768px) {
-    .hamburger, .mobile-menu {
+
+    .hamburger,
+    .mobile-menu {
         display: none;
     }
 
@@ -132,16 +175,20 @@
     /* Shift logo to align with screenshots section
     .app-icon {
         margin-left: 60px; /* adjust based on screenshots section padding */
-    
-        /* Align logo with screenshots section */
+
+    /* Align logo with screenshots section */
     .top-bar {
-        max-width: 1100px; /* same as screenshots section */
-        margin: 0 auto; /* center the header */
-        padding: 10px 0; /* optional: smaller padding since container is centered */
+        max-width: 1100px;
+        /* same as screenshots section */
+        margin: 0 auto;
+        /* center the header */
+        padding: 10px 0;
+        /* optional: smaller padding since container is centered */
     }
 
     .app-icon {
-        margin-left: 60px; /* adjust this value as needed */
+        margin-left: 60px;
+        /* adjust this value as needed */
         height: 100px;
     }
 }
@@ -154,8 +201,11 @@
 
 .hero h1 {
     font-family: 'georgia', serif;
-    transform: scaleY(1.1); /* 1 = normal, >1 = taller */
-
+    transform: scaleY(1.1);
+    /* 1 = normal, >1 = taller */
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 2rem;
     margin-bottom: 12px;
     line-height: 1.2;
@@ -355,7 +405,8 @@ header p {
 
 .daily-question {
     font-family: 'georgia', serif;
-    transform: scaleY(1.1); /* 1 = normal, >1 = taller */
+    transform: scaleY(1.1);
+    /* 1 = normal, >1 = taller */
     font-size: 0.90rem;
     line-height: 1.7;
     margin: 20px 0;
@@ -394,7 +445,8 @@ header p {
 
 .info-section h2 {
     font-family: 'georgia', serif;
-    transform: scaleY(1.1); /* 1 = normal, >1 = taller */
+    transform: scaleY(1.1);
+    /* 1 = normal, >1 = taller */
 
     font-size: 1.4rem;
     margin-bottom: 16px;
@@ -509,11 +561,12 @@ header p {
     text-align: center;
     margin-bottom: 40px;
     font-family: 'georgia', serif;
-    transform: scaleY(1.1); /* 1 = normal, >1 = taller */
+    transform: scaleY(1.1);
+    /* 1 = normal, >1 = taller */
 
 }
-.faq p {
-}
+
+.faq p {}
 
 .faq-item {
     background-color: #fff;
@@ -546,7 +599,8 @@ header p {
     transform: translateY(-50%) rotate(0deg);
     border: solid black;
     border-width: 0 2px 2px 0;
-    padding: 4px; /* size of the arrow */
+    padding: 4px;
+    /* size of the arrow */
     display: inline-block;
     transform-origin: center;
     transition: transform 0.3s ease;
@@ -555,7 +609,8 @@ header p {
 }
 
 .faq-item.open .faq-question::after {
-    transform: translateY(-50%) rotate(-135deg); /* flips it down to up */
+    transform: translateY(-50%) rotate(-135deg);
+    /* flips it down to up */
 }
 
 .faq-answer {
@@ -578,6 +633,7 @@ header p {
 .faq-answer p,
 .faq-answer ul,
 .faq-answer li {
-    font-size: 15px; /* or whatever size matches your design */
+    font-size: 15px;
+    /* or whatever size matches your design */
     line-height: 1.5;
 }
