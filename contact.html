@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>6Clique: Blog</title>
+    <title>6Clique: Contact Us</title>
     <link rel="stylesheet" href="style.css">
     <meta name="description"
         content="Read the story behind 6Clique, a social app built to foster meaningful emotional connections.">
@@ -49,33 +49,41 @@
         </div>
     </header>
 
+    <main class="contact-container">
+        <h1>We’d love to hear from you</h1>
+        <p>Questions, feedback, or ideas? Send us a message and connect with our team directly. If you need support with
+            your account, please click the Contact Support button through the mobile application, located in Settings.
+        </p>
 
-    <!-- BLOG CONTENT -->
-    <main class="blog-container">
-        <div class="blog-header">
-            <h1>Our Blog</h1>
-        </div>
+        <form id="contactForm">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" placeholder="Your name" required>
 
-        <div class="blog-list">
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" placeholder="Subject" required>
 
-            <!-- BLOG POST 1 -->
-            <article class="blog-post" data-href="https://6clique.com/blogs/social-media-and-loneliness">
-                <img src="images/loneliness.jpg" alt="A lonely woman due to social media">
-                <div class="blog-post-content">
-                    <h2>Social Media and Loneliness: Understanding the Hidden Connection</h2>
-                    <div class="date">August 14, 2025</div>
-                    <p>On the surface, social media seems like the ultimate solution to loneliness. It allows users to
-                        stay
-                        in touch with friends and family, meet new people, and participate in communities of shared
-                        interests. However, many people find that the connections they make online are often
-                        superficial.</p>
-                </div>
-            </article>
+            <label for="body">Message:</label>
+            <textarea id="body" placeholder="Type your message here..." rows="6" required></textarea>
 
+            <button type="submit">Send Message</button>
+        </form>
+
+        <div class="support-app-links">
+            <div class="download-buttons">
+                <a href="https://play.google.com/store/apps/details?id=com.sixclique" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                        alt="Get it on Google Play" />
+                </a>
+                <a href="https://apps.apple.com/app/idcom.sixclique" target="_blank" rel="noopener noreferrer">
+                    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                        alt="Download on the App Store" />
+                </a>
+            </div>
         </div>
     </main>
 
-    <!-- Footer (same as index.html) -->
+
+
     <footer class="site-footer">
         <p>
             <a href="https://6clique.com/privacy-policy">Privacy Policy</a> |
@@ -84,7 +92,6 @@
         <p>&copy; 2025 6Clique LLC. All rights reserved.</p>
     </footer>
 
-    <!-- Scripts (same as index.html) -->
     <script>
         const hamburger = document.querySelector('.hamburger');
         const mobileMenu = document.querySelector('.mobile-menu');
@@ -106,6 +113,20 @@
                 const url = post.getAttribute('data-href');
                 if (url) window.location.href = url;
             });
+        });
+    </script>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // prevent page reload
+
+            const name = encodeURIComponent(document.getElementById('name').value);
+            const subject = encodeURIComponent(document.getElementById('subject').value);
+            const body = encodeURIComponent(document.getElementById('body').value + "\n\nFrom: " + name);
+
+            const mailtoLink = `mailto:contact@6clique.com?subject=${subject}&body=${body}`;
+
+            window.location.href = mailtoLink;
         });
     </script>
 
