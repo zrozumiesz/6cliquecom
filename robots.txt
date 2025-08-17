@@ -1,0 +1,7 @@
+# robots.txt for 6clique.com
+# Allow all search engines full access
+
+User-agent: *
+Disallow:
+
+Sitemap: https://6clique.com/sitemap.xml
