@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>6Clique: Child Safety & Reporting</title>
   <link rel="stylesheet" href="style.css">
-  <meta name="description" content="6Clique child safety standards: age restriction (18+), reporting tools, moderation, enforcement, and resources." />
+  <meta name="description"
+    content="6Clique child safety standards: age restriction (18+), reporting tools, moderation, enforcement, and resources." />
   <link rel="icon" href="app-icon.png" type="image/png">
 </head>
 
@@ -56,9 +57,12 @@
 
     <h2>Age Requirement (18+ Only)</h2>
     <ul>
-      <li><strong>Minimum age:</strong> You must be at least 18 years old to use 6Clique. Users under 18 are not permitted.</li>
-      <li><strong>Enforcement:</strong> If we learn that an account belongs to someone under 18, the account will be <strong>removed immediately</strong>.</li>
-      <li><strong>Age checks:</strong> We may request additional verification if we have reason to believe an account is underage or otherwise in violation of our Terms.</li>
+      <li><strong>Minimum age:</strong> You must be at least 18 years old to use 6Clique. Users under 18 are not
+        permitted.</li>
+      <li><strong>Enforcement:</strong> If we learn that an account belongs to someone under 18, the account will be
+        <strong>removed immediately</strong>.</li>
+      <li><strong>Age checks:</strong> We may request additional verification if we have reason to believe an account is
+        underage or otherwise in violation of our Terms.</li>
     </ul>
 
     <h2>How to Report Content or Accounts</h2>
@@ -66,12 +70,14 @@
     <ul>
       <li><strong>Profiles:</strong> Tap the <em>flag</em> button on a user’s profile.</li>
       <li><strong>Messages:</strong> Long-press a message and choose <em>Report</em>.</li>
-      <li><strong>Journals & Comments:</strong> Tap the <em>⋯</em> (three-dot) button next to a journal or comment and select <em>Report</em>.</li>
+      <li><strong>Journals & Comments:</strong> Tap the <em>⋯</em> (three-dot) button next to a journal or comment and
+        select <em>Report</em>.</li>
     </ul>
     <p>When reporting, please include any relevant details or context to help our moderators review quickly.</p>
 
     <h2>What We Review & Possible Actions</h2>
-    <p>Our moderation team reviews reports <strong>as soon as possible</strong>. We take action on violations, including but not limited to:</p>
+    <p>Our moderation team reviews reports <strong>as soon as possible</strong>. We take action on violations, including
+      but not limited to:</p>
     <ul>
       <li>Removing violating content (profiles, journals, comments, messages)</li>
       <li>Temporary restrictions (read-only mode, feature limits)</li>
@@ -82,8 +88,10 @@
     <h2>Safety Tools</h2>
     <ul>
       <li><strong>Block & Mute:</strong> You can block or mute other users to stop unwanted contact.</li>
-      <li><strong>Privacy Controls:</strong> Adjust your visibility and interaction preferences in <em>Settings</em>.</li>
-      <li><strong>In-App Reporting:</strong> Fast, built-in tools to report content or users from profiles, messages, journals, and comments.</li>
+      <li><strong>Privacy Controls:</strong> Adjust your visibility and interaction preferences in <em>Settings</em>.
+      </li>
+      <li><strong>In-App Reporting:</strong> Fast, built-in tools to report content or users from profiles, messages,
+        journals, and comments.</li>
     </ul>
 
     <h2>Content Standards</h2>
@@ -105,13 +113,16 @@
     <h2>Data Handling for Safety</h2>
     <ul>
       <li>We use report details and related metadata to investigate and enforce our policies.</li>
-      <li>When we remove an under-18 account, it is <strong>deleted</strong>. Some minimal records may be retained for a limited period to meet legal, security, and anti-abuse obligations.</li>
-      <li>For more on how we handle data, please review our <a href="https://6clique.com/privacy-policy">Privacy Policy</a>.</li>
+      <li>When we remove an under-18 account, it is <strong>deleted</strong>. Some minimal records may be retained for a
+        limited period to meet legal, security, and anti-abuse obligations.</li>
+      <li>For more on how we handle data, please review our <a href="https://6clique.com/privacy-policy">Privacy
+          Policy</a>.</li>
     </ul>
 
     <h2>Law-Enforcement Requests</h2>
     <p>
-      We cooperate with valid legal requests and may preserve data when legally required. Non-emergency inquiries can be directed to
+      We cooperate with valid legal requests and may preserve data when legally required. Non-emergency inquiries can be
+      directed to
       <a href="mailto:support@6clique.com">support@6clique.com</a>.
     </p>
 
@@ -131,10 +142,13 @@
     <h2>Summary for App Store Listing (Compliance Snapshot)</h2>
     <ul>
       <li><strong>Age requirement:</strong> 18+ only; under-18 accounts are removed.</li>
-      <li><strong>Reporting tools:</strong> Flag on profiles; long-press on messages; three-dot menu on journals/comments.</li>
-      <li><strong>Moderation:</strong> Reports reviewed as soon as possible; content removal or account action taken when appropriate.</li>
+      <li><strong>Reporting tools:</strong> Flag on profiles; long-press on messages; three-dot menu on
+        journals/comments.</li>
+      <li><strong>Moderation:</strong> Reports reviewed as soon as possible; content removal or account action taken
+        when appropriate.</li>
       <li><strong>User controls:</strong> Block/mute; privacy settings available in Settings.</li>
-      <li><strong>Data:</strong> Report data used for safety enforcement; under-18 accounts deleted; limited retention for legal/security obligations.</li>
+      <li><strong>Data:</strong> Report data used for safety enforcement; under-18 accounts deleted; limited retention
+        for legal/security obligations.</li>
     </ul>
   </main>
 
@@ -145,6 +159,21 @@
     </p>
     <p>&copy; 2025 6Clique LLC. All rights reserved.</p>
   </footer>
+
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    hamburger.addEventListener('click', () => {
+      mobileMenu.style.display = mobileMenu.style.display === 'block' ? 'none' : 'block';
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+        mobileMenu.style.display = 'none';
+      }
+    });
+  </script>
 </body>
 
 </html>
