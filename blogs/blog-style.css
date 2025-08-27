@@ -158,13 +158,15 @@ a {
 
 .blog-post-content h3 {
     font-family: 'georgia', serif;
+    transform: scaleY(1.1);
     font-size: 1.3rem;
     margin-bottom: 0.5rem;
 }
 
 .blog-post-content h2 {
     font-family: 'georgia', serif;
-    font-size: 1.8rem;
+    transform: scaleY(1.1);
+    font-size: 1.5rem;
     margin-bottom: 0.5rem;
 }
 
@@ -200,7 +202,8 @@ a {
 }
 
 .blog-post-content ol {
-    padding-left: 3rem; /* Controls how far the numbers are from the left edge */
+    padding-left: 3rem;
+    /* Controls how far the numbers are from the left edge */
 }
 
 .blog-post-content ol li {
@@ -210,6 +213,43 @@ a {
     line-height: 1.6;
 }
 
+.blog-post-content .signup-button {
+    display: inline-block;
+    background-color: #000000;
+    /* bold, eye-catching red */
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 2rem;
+
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: 'Georgia', serif;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.blog-post-content .signup-button:hover {
+    background-color: #63474a;
+    /* darker red on hover */
+    color: #ffffff;
+
+    transform: translateY(-2px);
+    /* subtle lift effect */
+}
+
+.blog-post-content a {
+    color: #4b2ae0;
+    /* pick any hex color */
+    text-decoration: none;
+    /* remove underline if you want */
+    font-weight: bold;
+}
+
+.blog-post-content a:hover {
+    color: #004999;
+    /* darker shade on hover */
+    text-decoration: underline;
+}
 
 /* Hamburger menu */
 .hamburger {
