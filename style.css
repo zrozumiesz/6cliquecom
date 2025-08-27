@@ -40,6 +40,7 @@
 }
 
 .story-section .hero-title {
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
     font-family: 'georgia', serif;
     transform: scaleY(1.1);
     font-size: 2rem;
@@ -68,10 +69,8 @@
     position: relative;
     padding-left: 1rem;
     margin-top: 1rem;
-    /* top spacing */
     margin-bottom: 1rem;
     border-left: 3px solid #6c8a8e;
-    /* change color to match your site */
     font-family: 'Georgia', serif;
     font-size: 1rem;
     line-height: 1.5;
@@ -203,9 +202,6 @@
         display: block;
     }
 
-    /* Shift logo to align with screenshots section
-    .app-icon {
-        margin-left: 60px; /* adjust based on screenshots section padding */
 
     /* Align logo with screenshots section */
     .top-bar {
@@ -245,12 +241,13 @@
 }
 
 .hero p {
+    font-family: 'georgia', serif;
     font-size: 1rem;
     margin-bottom: 30px;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); */
 }
 
 
@@ -421,6 +418,7 @@ header p {
 
 .text-item {
     display: flex;
+    font-family: 'georgia', serif;
     flex-direction: column;
     justify-content: center;
     padding: 20px;
@@ -472,6 +470,8 @@ header p {
     max-width: 900px;
     margin: 20px auto 0 auto;
     text-align: center;
+    font-family: 'georgia', serif;
+
 }
 
 .info-section h2 {
@@ -579,6 +579,8 @@ header p {
 
 /* FAQ Section */
 .faq {
+    font-family: 'georgia', serif;
+
     max-width: 800px;
     margin: 60px auto;
     padding: 0 24px;
@@ -586,6 +588,7 @@ header p {
 }
 
 .faq h2 {
+    font-family: 'georgia', serif;
     font-size: 1.6rem;
     font-weight: 800;
     color: #334422;
@@ -693,6 +696,7 @@ header p {
     margin-bottom: 12px;
     line-height: 1.2;
     font-weight: 900;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -794,6 +798,7 @@ header p {
 }
 
 .contact-container h1 {
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
     font-family: 'georgia', serif;
     transform: scaleY(1.1);
     font-size: 2rem;
