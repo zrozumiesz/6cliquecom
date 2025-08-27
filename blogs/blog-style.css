@@ -186,7 +186,7 @@ a {
 }
 
 /* Lists as quote-style blocks */
-.blog-post-content ul {
+/* .blog-post-content ul {
     list-style: none;
     padding-left: 1rem;
     border-left: 3px solid #6c8a8e;
@@ -199,19 +199,80 @@ a {
     font-family: 'georgia', serif;
     font-size: 1rem;
     line-height: 1.6;
+} */
+
+/* .blog-post-content ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 1rem 0;
 }
 
-.blog-post-content ol {
-    padding-left: 3rem;
-    /* Controls how far the numbers are from the left edge */
+.blog-post-content ul li {
+    margin-bottom: 1rem; 
+    padding-left: 1rem; 
+    font-family: 'georgia', serif;
+    font-size: 1rem;
+    line-height: 1.6;
+
+    border-left: 3px solid #6c8a8e; 
+} */
+
+
+/* Quote-style blocks */
+.blog-post-content blockquote {
+    border-left: 3px solid #6c8a8e;
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: #444;
 }
 
-.blog-post-content ol li {
-    margin-bottom: 0.75rem;
-    font-family: 'Georgia', serif;
+/* Lists for features/benefits */
+.blog-post-content ul {
+    list-style: disc inside;
+    padding-left: 1.25rem;
+    margin: 0.5rem 0;
+}
+
+.blog-post-content ul li {
+    margin-bottom: 0.2rem;
+    font-family: 'georgia', serif;
     font-size: 1rem;
     line-height: 1.6;
 }
+
+.blog-post-content ol {
+    counter-reset: item;
+    padding-left: 1rem;
+
+    list-style: none;
+}
+
+.blog-post-content ol li {
+    font-family: 'Georgia', serif;
+    font-size: 1rem;
+    counter-increment: item;
+    margin-bottom: 1.25rem;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.blog-post-content ol li::before {
+    content: counter(item);
+    position: absolute;
+    left: 0;
+    background: #000000;
+    color: white;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+}
+
+
 
 .blog-post-content .signup-button {
     display: inline-block;
@@ -219,8 +280,7 @@ a {
     /* bold, eye-catching red */
     color: #ffffff;
     font-weight: bold;
-    margin-bottom: 2rem;
-
+    margin-bottom: 1rem;
     padding: 0.75rem 1.5rem;
     border-radius: 8px;
     text-decoration: none;
