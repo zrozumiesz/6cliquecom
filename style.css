@@ -531,6 +531,33 @@ header {
     /* needed for absolute positioning inside */
 }
 
+@media (max-width: 900px) {
+    .alt-row,
+    .alt-row.alt-reverse {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .alt-screenshot img {
+        width: 100%;
+        height: auto;
+    }
+
+    .alt-text {
+        width: 90%;
+        text-align: center;
+    }
+
+    .prompt-card,
+    .shadowed-card {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+
 
 
 header h1 {
