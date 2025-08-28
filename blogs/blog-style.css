@@ -213,7 +213,6 @@ a {
 .blog-post-content ol {
     counter-reset: item;
     padding-left: 1rem;
-
     list-style: none;
 }
 
