@@ -355,7 +355,7 @@
 /* Mobile menu hidden by default */
 .mobile-menu {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 60px;
     /* adjust depending on your header height */
     right: 20px;
