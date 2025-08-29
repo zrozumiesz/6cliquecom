@@ -326,7 +326,6 @@
 /* Hamburger menu */
 .hamburger {
     display: flex;
-    /* hidden on desktop */
     flex-direction: column;
     justify-content: space-between;
     width: 25px;
@@ -335,14 +334,19 @@
     border: none;
     cursor: pointer;
     padding: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 .hamburger span {
     display: block;
     width: 100%;
     height: 3px;
-    background-color: black;
+    background-color: #000;
     border-radius: 2px;
+    flex-shrink: 0;
+
 }
 
 /* Show hamburger only on smaller screens */
@@ -532,6 +536,7 @@ header {
 }
 
 @media (max-width: 900px) {
+
     .alt-row,
     .alt-row.alt-reverse {
         display: flex;
