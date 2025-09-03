@@ -242,18 +242,21 @@ a {
 .type-cards {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem; /* space between cards */
+    gap: 1rem;
+    /* space between cards */
     margin: 2rem 0;
 }
 
 /* Individual cards */
 .type-card {
-    flex: 1 1 calc(20% - 1rem); /* 5 cards per row on wide screens */
+    flex: 1 1 calc(20% - 1rem);
+    /* 5 cards per row on wide screens */
     background: #f9f9f9;
     border-left: 4px solid #6c8a8e;
     border-radius: 8px;
     padding: 1rem;
-    min-width: 220px; /* prevents squishing too much */
+    min-width: 220px;
+    /* prevents squishing too much */
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
@@ -307,51 +310,62 @@ a {
     color: #667085;
     opacity: 0.95;
 
-    display: block;            /* make it block so it spans container width */
-    text-align: center;        /* centers text inside the block */
+    display: block;
+    /* make it block so it spans container width */
+    text-align: center;
+    /* centers text inside the block */
     position: relative;
-    margin: 0.75rem 0 1rem;    /* auto left/right margin not needed since text-align centers it */
+    margin: 0.75rem 0 1rem;
+    /* auto left/right margin not needed since text-align centers it */
 }
 
 .trait-subtitle::after {
     content: "";
-    display: block;      /* ensures it’s on its own line */
-    width: 100px;         /* length of the underline */
+    display: block;
+    /* ensures it’s on its own line */
+    width: 56px;
+    /* length of the underline */
     height: 2px;
-    margin: 4px auto 0;  /* gap above, centered automatically */
+    margin: 4px auto 0;
+    /* gap above, centered automatically */
     background: #6c8a8e;
     border-radius: 2px;
     opacity: 0.7;
 }
 
 
-
-/* On very small screens, keep it left-aligned so it doesn't dominate */
+/* Mobile: left-align text but keep underline centered */
 @media (max-width: 520px) {
     .trait-subtitle {
         text-align: left;
+        /* text moves left */
     }
+
     .trait-subtitle::after {
-        margin-left: 0;          /* align underline with text */
+        /* keep margin auto so underline stays centered under text */
+        margin: 4px auto 0;
     }
 }
 
 /* Optional: when placed directly after a section heading, tighten spacing */
-h2 + .trait-subtitle,
-h3 + .trait-subtitle {
-    margin-top: 0.25rem;         /* closer to heading */
+h2+.trait-subtitle,
+h3+.trait-subtitle {
+    margin-top: 0.25rem;
+    /* closer to heading */
 }
 
 /* Responsive: stack cards on smaller screens */
 @media (max-width: 900px) {
     .type-card {
-        flex: 1 1 calc(50% - 1rem); /* 2 per row on tablets */
+        flex: 1 1 calc(50% - 1rem);
+        /* 2 per row on tablets */
     }
 }
 
 @media (max-width: 600px) {
     .type-card {
-        flex: 1 1 100%; /* stack vertically on mobile */
+        flex: 1 1 100%;
+        /* stack vertically on mobile */
     }
 }
 
