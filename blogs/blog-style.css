@@ -225,6 +225,140 @@ a {
     padding-left: 2rem;
 }
 
+.blog-post-content ol .custom-quote {
+    font-family: 'Georgia', serif;
+    font-size: 1rem;
+    font-style: italic;
+    color: #444;
+    position: relative;
+    padding-left: 1rem;
+    border-left: 3px solid #6c8a8e;
+    margin: 1.5rem 0;
+    display: block;
+}
+
+
+/* Card container */
+.type-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; /* space between cards */
+    margin: 2rem 0;
+}
+
+/* Individual cards */
+.type-card {
+    flex: 1 1 calc(20% - 1rem); /* 5 cards per row on wide screens */
+    background: #f9f9f9;
+    border-left: 4px solid #6c8a8e;
+    border-radius: 8px;
+    padding: 1rem;
+    min-width: 220px; /* prevents squishing too much */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Title */
+.type-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.1rem;
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+    color: #334422;
+}
+
+/* Description */
+.type-description {
+    font-family: 'Georgia', serif;
+    font-size: 0.95rem;
+    color: #444;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+/* Example */
+.type-example {
+    font-family: 'Georgia', serif;
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* Compatibility Pattern */
+.compatibility-pattern {
+    font-family: 'Georgia', serif;
+    font-size: 1rem;
+    margin-top: 2rem;
+    padding-left: 1rem;
+    border-left: 3px solid #334422;
+    color: #444;
+    line-height: 1.6;
+}
+
+
+
+
+.trait-subtitle {
+    font-family: 'Georgia', serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #667085;
+    opacity: 0.95;
+
+    display: block;            /* make it block so it spans container width */
+    text-align: center;        /* centers text inside the block */
+    position: relative;
+    margin: 0.75rem 0 1rem;    /* auto left/right margin not needed since text-align centers it */
+}
+
+.trait-subtitle::after {
+    content: "";
+    display: block;      /* ensures it’s on its own line */
+    width: 100px;         /* length of the underline */
+    height: 2px;
+    margin: 4px auto 0;  /* gap above, centered automatically */
+    background: #6c8a8e;
+    border-radius: 2px;
+    opacity: 0.7;
+}
+
+
+
+/* On very small screens, keep it left-aligned so it doesn't dominate */
+@media (max-width: 520px) {
+    .trait-subtitle {
+        text-align: left;
+    }
+    .trait-subtitle::after {
+        margin-left: 0;          /* align underline with text */
+    }
+}
+
+/* Optional: when placed directly after a section heading, tighten spacing */
+h2 + .trait-subtitle,
+h3 + .trait-subtitle {
+    margin-top: 0.25rem;         /* closer to heading */
+}
+
+/* Responsive: stack cards on smaller screens */
+@media (max-width: 900px) {
+    .type-card {
+        flex: 1 1 calc(50% - 1rem); /* 2 per row on tablets */
+    }
+}
+
+@media (max-width: 600px) {
+    .type-card {
+        flex: 1 1 100%; /* stack vertically on mobile */
+    }
+}
+
+
+
+
+
 .blog-post-content ol li::before {
     content: counter(item);
     position: absolute;
@@ -473,13 +607,16 @@ a {
 
 
 .point-block {
-    background-color: #f9f9f9e2; /* subtle background */
-    border-left: 4px solid #000000; /* accent color */
+    background-color: #f9f9f9e2;
+    /* subtle background */
+    border-left: 4px solid #000000;
+    /* accent color */
     padding: 0.3rem;
     padding-left: 1rem;
     margin-bottom: 1rem;
     border-radius: 6px;
 }
+
 .point-block p {
     margin-top: 0.5rem;
     line-height: 1.5;
@@ -488,6 +625,7 @@ a {
 .story-paragraph {
     margin: 1rem 0;
     padding-left: 1rem;
-    border-left: 3px solid #000000; /* accent color */
+    border-left: 3px solid #000000;
+    /* accent color */
     line-height: 1.6;
 }
