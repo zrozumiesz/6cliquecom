@@ -368,7 +368,6 @@ h3+.trait-subtitle {
         /* stack vertically on mobile */
     }
 }
-
 .benefits-section {
     margin: 2rem 0;
 }
@@ -382,8 +381,10 @@ h3+.trait-subtitle {
     margin-bottom: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    align-items: flex-start;
 }
 
+/* Number styling */
 .benefit-number {
     font-size: 2rem;
     font-weight: bold;
@@ -391,6 +392,7 @@ h3+.trait-subtitle {
     flex-shrink: 0;
 }
 
+/* Content styling */
 .benefit-content h3 {
     margin: 0 0 0.5rem;
     font-size: 1.25rem;
@@ -403,6 +405,20 @@ h3+.trait-subtitle {
     line-height: 1.6;
 }
 
+/* Mobile responsive: stack number on top */
+@media (max-width: 600px) {
+    .benefit-card {
+        flex-direction: column;
+        border-left: none;
+        border-top: 5px solid #000000;
+        padding: 1rem;
+    }
+
+    .benefit-number {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+}
 
 
 
