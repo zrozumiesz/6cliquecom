@@ -60,7 +60,8 @@
       <li><strong>Minimum age:</strong> You must be at least 18 years old to use 6Clique. Users under 18 are not
         permitted.</li>
       <li><strong>Enforcement:</strong> If we learn that an account belongs to someone under 18, the account will be
-        <strong>removed immediately</strong>.</li>
+        <strong>removed immediately</strong>.
+      </li>
       <li><strong>Age checks:</strong> We may request additional verification if we have reason to believe an account is
         underage or otherwise in violation of our Terms.</li>
     </ul>
@@ -157,10 +158,12 @@
       <a href="https://6clique.com/privacy-policy">Privacy Policy</a> |
       <a href="https://6clique.com/terms-and-conditions">Terms &amp; Conditions</a>
     </p>
-    <p>&copy; 2025 6Clique LLC. All rights reserved.</p>
+    <p>&copy; <span id="current-year"></span> 6Clique LLC. All rights reserved.</p>
   </footer>
 
   <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
     const hamburger = document.querySelector('.hamburger');
     const mobileMenu = document.querySelector('.mobile-menu');
 

@@ -239,7 +239,8 @@
                     place that helped me open up when no one could break me open.</p>
 
                 <p>If you’ve ever said, “I’m not emotionally available,” you’re not alone. But you don’t have to stay
-                    stuck. You can start small in the 6Clique community. One journal, one conversation, one step toward openness. And maybe, in
+                    stuck. You can start small in the 6Clique community. One journal, one conversation, one step toward
+                    openness. And maybe, in
                     the process, you’ll find others who are ready to walk with you.</p>
             </div>
         </article>
@@ -268,11 +269,13 @@
             <a href="https://6clique.com/privacy-policy">Privacy Policy</a> |
             <a href="https://6clique.com/terms-and-conditions">Terms & Conditions</a>
         </p>
-        <p>&copy; 2025 6Clique LLC. All rights reserved.</p>
+        <p>&copy; <span id="current-year"></span> 6Clique LLC. All rights reserved.</p>
     </footer>
 
     <!-- Scripts -->
     <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
         const hamburger = document.querySelector('.hamburger');
         const mobileMenu = document.querySelector('.mobile-menu');
 

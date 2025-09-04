@@ -57,7 +57,18 @@
         </div>
 
         <div class="blog-list">
+            <article class="blog-post" data-href="https://6clique.com/blogs/shared-journals">
+                <img src="images/shared-journals.webp" alt="Shared journals: benefits and more">
+                <div class="blog-post-content">
+                    <h2>Shared Journals: The Benefits of Vulnerability in a Community</h2>
+                    <div class="date">September 4, 2025</div>
+                    <p>Discover the power of shared journaling and vulnerability in building genuine connections. In
+                        Japanese culture, shared journals have offered benefits since the 1990s. This
+                        article explores how journaling in a safe community fosters emotional support, personal
+                        growth, and meaningful friendships.</p>
 
+                </div>
+            </article>
             <article class="blog-post"
                 data-href="https://6clique.com/blogs/the-four-components-of-emotional-compatibility">
                 <img src="images/friendship.webp" alt="Two emotionally compatible friends">
@@ -117,11 +128,13 @@
             <a href="https://6clique.com/privacy-policy">Privacy Policy</a> |
             <a href="https://6clique.com/terms-and-conditions">Terms & Conditions</a>
         </p>
-        <p>&copy; 2025 6Clique LLC. All rights reserved.</p>
+        <p>&copy; <span id="current-year"></span> 6Clique LLC. All rights reserved.</p>
     </footer>
 
     <!-- Scripts (same as index.html) -->
     <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
         const hamburger = document.querySelector('.hamburger');
         const mobileMenu = document.querySelector('.mobile-menu');
 

@@ -533,11 +533,13 @@
             <a href="https://6clique.com/privacy-policy">Privacy Policy</a> |
             <a href="https://6clique.com/terms-and-conditions">Terms & Conditions</a>
         </p>
-        <p>&copy; 2025 6Clique LLC. All rights reserved.</p>
+        <p>&copy; <span id="current-year"></span> 6Clique LLC. All rights reserved.</p>
     </footer>
 
     <!-- Scripts -->
     <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
         const hamburger = document.querySelector('.hamburger');
         const mobileMenu = document.querySelector('.mobile-menu');
 

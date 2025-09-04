@@ -71,7 +71,8 @@
         </div>
 
         <article class="blog-post-full">
-            <img src="../images/social-experiment-photo.webp" alt="6Clique laucnhes new social experiment for loneliness">
+            <img src="../images/social-experiment-photo.webp"
+                alt="6Clique laucnhes new social experiment for loneliness">
 
             <div class="blog-post-content">
                 <p>Loneliness is an increasingly common experience in today’s hyper-connected yet emotionally distant
@@ -102,7 +103,8 @@
                 <br>
 
                 <h2>Deep Conversations in 6 Days</h2>
-                <p>What is the loneliness social experiment? To explore how intentional online spaces can alleviate feelings of loneliness, 6Clique is inviting
+                <p>What is the loneliness social experiment? To explore how intentional online spaces can alleviate
+                    feelings of loneliness, 6Clique is inviting
                     participants to take part in a timed 6-day group chat social experiment. The goal is to create an
                     environment where participants skip the small talk and jump straight into meaningful conversations.
                 </p>
@@ -219,11 +221,13 @@
             <a href="https://6clique.com/privacy-policy">Privacy Policy</a> |
             <a href="https://6clique.com/terms-and-conditions">Terms & Conditions</a>
         </p>
-        <p>&copy; 2025 6Clique LLC. All rights reserved.</p>
+        <p>&copy; <span id="current-year"></span> 6Clique LLC. All rights reserved.</p>
     </footer>
 
     <!-- Scripts -->
     <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
         const hamburger = document.querySelector('.hamburger');
         const mobileMenu = document.querySelector('.mobile-menu');
 

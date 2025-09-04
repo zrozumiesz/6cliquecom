@@ -80,7 +80,7 @@
                     connecting via Twitter, social media promises connection, entertainment, and a sense of community.
                     Yet, despite these promises, research increasingly shows that social media can contribute to
                     feelings of loneliness. If you’ve ever asked yourself, "Why does social media make me feel
-                        more lonely?",
+                    more lonely?",
                     the answer lies in how digital communication often replaces authentic human interaction
                     (<a href="https://en.wikipedia.org/wiki/Sherry_Turkle" target="_blank"
                         rel="noopener noreferrer">Turkle, 2011</a>).
@@ -174,14 +174,15 @@
                     At 6Clique, we recognize the challenges of social media and loneliness and have designed our
                     platform to address them directly. Unlike traditional social media, which often prioritizes metrics,
                     likes, and viral content, 6Clique focuses on authentic emotional connections. Users engage in small,
-                    intimate groups that encourage trust, empathy, and shared experiences.<p>
+                    intimate groups that encourage trust, empathy, and shared experiences.
+                <p>
 
-                    <p>By promoting meaningful interaction over superficial engagement, 6Clique creates a supportive
+                <p>By promoting meaningful interaction over superficial engagement, 6Clique creates a supportive
                     environment where users feel seen, heard, and valued. Daily prompts, journals, and thoughtfully
                     designed group activities help members cultivate genuine relationships, reducing the sense of
                     isolation that so often accompanies online life.</p>
 
-                    <p>Whether you are seeking emotional support, new friendships, or simply a space to express yourself
+                <p>Whether you are seeking emotional support, new friendships, or simply a space to express yourself
                     authentically, 6Clique offers an alternative to traditional social media. By prioritizing quality
                     interactions and fostering emotional presence, the platform helps users combat loneliness while
                     enjoying the benefits of online connection.
@@ -232,11 +233,13 @@
             <a href="https://6clique.com/privacy-policy">Privacy Policy</a> |
             <a href="https://6clique.com/terms-and-conditions">Terms & Conditions</a>
         </p>
-        <p>&copy; 2025 6Clique LLC. All rights reserved.</p>
+        <p>&copy; <span id="current-year"></span> 6Clique LLC. All rights reserved.</p>
     </footer>
 
     <!-- Scripts -->
     <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
         const hamburger = document.querySelector('.hamburger');
         const mobileMenu = document.querySelector('.mobile-menu');
 

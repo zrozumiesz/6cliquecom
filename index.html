@@ -159,8 +159,7 @@
             <!-- Row 3 -->
             <div class="alt-row">
                 <div class="alt-screenshot">
-                    <img src="images/quizzes.webp"
-                        alt="Take emotional availability quiz in a social media app" />
+                    <img src="images/quizzes.webp" alt="Take emotional availability quiz in a social media app" />
                 </div>
                 <div class="alt-text">
                     <div class="shadowed-card">
@@ -184,8 +183,7 @@
 
             <div class="alt-row alt-reverse">
                 <div class="alt-screenshot">
-                    <img src="images/journalling.webp"
-                        alt="Shared journalling social app for deep conversations" />
+                    <img src="images/journalling.webp" alt="Shared journalling social app for deep conversations" />
                 </div>
                 <div class="alt-text">
                     <div class="shadowed-card">
@@ -349,7 +347,7 @@
             <a href="https://6clique.com/privacy-policy">Privacy Policy</a> |
             <a href="https://6clique.com/terms-and-conditions">Terms & Conditions</a>
         </p>
-        <p>&copy; 2025 6Clique LLC. All rights reserved.</p>
+        <p>&copy; <span id="current-year"></span> 6Clique LLC. All rights reserved.</p>
     </footer>
 </body>
 
@@ -357,6 +355,8 @@
 
 <!-- FAQ script -->
 <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
     document.querySelectorAll('.faq-question').forEach(question => {
         question.addEventListener('click', () => {
             const item = question.parentElement;

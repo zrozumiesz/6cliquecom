@@ -20,7 +20,7 @@
     <loc>https://6clique.com/contact</loc>
     <lastmod>2025-08-17</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
   </url>
 
   <url>
@@ -68,6 +68,13 @@
   <url>
     <loc>https://6clique.com/blogs/the-four-components-of-emotional-compatibility</loc>
     <lastmod>2025-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://6clique.com/blogs/shared-journals</loc>
+    <lastmod>2025-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

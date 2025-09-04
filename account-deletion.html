@@ -48,22 +48,26 @@
 
     <main class="account-deletion container" style="padding: 20px 24px; max-width: 900px;">
         <h1 class="hero-title">Account Deletion</h1>
-        <p>This page explains how to delete your account in the <span class="highlight">6Clique</span> social app and what
+        <p>This page explains how to delete your account in the <span class="highlight">6Clique</span> social app and
+            what
             happens to your data.</p>
 
         <h2>How to Delete Your Account</h2>
         <ol>
             <li>Log in to your account in the 6Clique app. You cannot delete your account if you are not logged in.
             </li>
-            <li>Navigate to the <strong>Settings</strong> page by first tapping your profile, then selecting the gear icon in the top-right corner. </li>
+            <li>Navigate to the <strong>Settings</strong> page by first tapping your profile, then selecting the gear
+                icon in the top-right corner. </li>
             <li>Click the <strong>Delete Account</strong> button, located in the Account subsection.</li>
-            <li>Type in the phrase: <span class="highlight">"I agree to delete my account"</span>. This phrase must be typed exactly as shown, including capitalization, spelling, and punctuation.</li>
+            <li>Type in the phrase: <span class="highlight">"I agree to delete my account"</span>. This phrase must be
+                typed exactly as shown, including capitalization, spelling, and punctuation.</li>
             <li>If you signed in with email/password, enter your current password. (No password is needed for OAuth
                 logins.)</li>
         </ol>
 
         <h2>What Happens When You Delete Your Account</h2>
-        <p>Account deletions are <span class="highlight">immediate and final</span>. If you choose to delete your account, we will not be able to recover your account data. All user data is instantly removed
+        <p>Account deletions are <span class="highlight">immediate and final</span>. If you choose to delete your
+            account, we will not be able to recover your account data. All user data is instantly removed
             from our backend services, including:</p>
         <ul>
             <li>User profiles</li>
@@ -84,15 +88,33 @@
         <h2>Questions?</h2>
         <p>If you encounter any issues, please contact <a href="mailto:support@6clique.com">support@6clique.com</a>.
         </p>
-    </div>
+        </div>
 
-    <footer class="site-footer">
-        <p>
-            <a href="https://6clique.com/privacy-policy">Privacy Policy</a> |
-            <a href="https://6clique.com/terms-and-conditions">Terms & Conditions</a>
-        </p>
-        <p>&copy; 2025 6Clique LLC. All rights reserved.</p>
-    </footer>
+        <footer class="site-footer">
+            <p>
+                <a href="https://6clique.com/privacy-policy">Privacy Policy</a> |
+                <a href="https://6clique.com/terms-and-conditions">Terms & Conditions</a>
+            </p>
+            <p>&copy; <span id="current-year"></span> 6Clique LLC. All rights reserved.</p>
+        </footer>
+
+
+        <script>
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            const hamburger = document.querySelector('.hamburger');
+            const mobileMenu = document.querySelector('.mobile-menu');
+
+            hamburger.addEventListener('click', () => {
+                mobileMenu.style.display = mobileMenu.style.display === 'block' ? 'none' : 'block';
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+                    mobileMenu.style.display = 'none';
+                }
+            });
+        </script>
 </body>
 
 </html>
