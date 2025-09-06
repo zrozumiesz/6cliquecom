@@ -756,6 +756,15 @@ h3+.trait-subtitle {
     flex-shrink: 0;
 }
 
+@media (max-width: 768px) {
+    .pros-cons {
+        grid-template-columns: 1fr;
+        /* single column */
+        gap: 16px;
+        /* slightly smaller gap for mobile */
+    }
+}
+
 
 .key-features {
     /* background: linear-gradient(135deg, #f0f7ff, #ffffff); */
