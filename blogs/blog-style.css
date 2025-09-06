@@ -876,6 +876,7 @@ h3+.trait-subtitle {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: #333;
 }
 
 .faq-question::after {
