@@ -906,3 +906,148 @@ h3+.trait-subtitle {
     max-height: 800px;
     padding: 0 24px 20px 24px;
 }
+
+/* Table of Contents */
+.toc {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 24px;
+    background: #f9f9f9;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.toc h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-family: Georgia, serif;
+}
+
+/* Multi-column grid */
+.toc ul {
+    display: grid;
+    gap: 16px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: start;
+    /* top-align items in row */
+    grid-template-columns: repeat(2, 1fr);
+    /* default 2 per row */
+}
+
+.toc li {
+    margin: 0;
+}
+
+.toc a {
+    display: flex;
+    align-items: center;
+    /* centers short text vertically */
+    justify-content: center;
+    min-height: 4.5em;
+    /* enough for ~2 lines of text */
+    line-height: 1.5;
+    /* spacing for each line */
+    padding: 10px 14px;
+    text-align: center;
+    background: white;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #334;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    overflow-wrap: anywhere;
+}
+
+.toc a:hover {
+    background: #eef5ff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Wide screens: 4 per row */
+@media (min-width: 800px) {
+    .toc ul {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Optional: tiny screens fallback, still 2 per row */
+@media (max-width: 500px) {
+    .toc ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+
+.mbti-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 28px;
+    margin: 40px 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.mbti-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* top alignment */
+    flex-wrap: wrap;
+    gap: 4px; /* small horizontal/vertical gap */
+}
+
+.card-header h2 {
+    margin: 0;
+    flex: 1 1 auto; /* allow title to shrink if needed */
+}
+
+.compatibility-badge {
+    color: white !important;
+    background: #000000;
+    padding: 6px 12px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.7rem;
+    display: inline-block;
+    margin-top: 4px;   /* spacing if badge drops below title */
+    margin-bottom: 20px; /* extra space after badge when wrapping */
+}
+
+/* Hover states */
+.compatibility-badge:hover,
+.compatibility-badge:visited,
+.compatibility-badge:active,
+.compatibility-badge:focus {
+    color: white !important;
+}
+
+.compatibility-badge:hover {
+    background: #0b4618;
+    transform: translateY(-2px);
+}
+
+/* Small screens: center badge below title */
+@media (max-width: 400px) {
+    .card-header {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .compatibility-badge {
+        margin-top: 8px;   /* a bit more for tiny screens */
+        margin-bottom: 8px; 
+    }
+}
