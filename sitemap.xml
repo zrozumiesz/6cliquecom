@@ -92,9 +92,23 @@
     <priority>0.8</priority>
   </url>
 
-    <url>
+  <url>
     <loc>https://6clique.com/blogs/mbti-friendship-compatibility</loc>
     <lastmod>2025-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://6clique.com/blogs/ghosting-in-friendships</loc>
+    <lastmod>2025-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://6clique.com/blogs/emotional-impacts-of-sexual-assault</loc>
+    <lastmod>2025-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
